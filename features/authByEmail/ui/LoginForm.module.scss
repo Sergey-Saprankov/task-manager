@@ -1,0 +1,52 @@
+.LoginForm {
+  position: relative;
+  padding: 40px 50px;
+
+  //display: flex;
+  //justify-content: center;
+  background-color: var(--bg-primary);
+  border-radius: 27px;
+  opacity: 0.9;
+}
+
+.opacity {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 30px;
+  background: linear-gradient(
+    109.46deg,
+    rgba(239, 239, 239, 0.8) 1.57%,
+    rgba(196, 196, 196, 0.1) 100%
+  );
+  opacity: 0.3;
+  backdrop-filter: blur(30px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 27px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+
+.mt50 {
+  margin-top: 50px;
+}

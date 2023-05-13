@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+
+  --main-bg: #fff;
+  --secondary-bg: #F5F5F5;
+  --active-bg: rgba(80, 48, 229, 0.08);
+  --violet-bg: #5030E5;
+
+  --color-navlink: #787486;
+  --color-dark: #0D062D;
+  --color-light: #fff;
+  --color-button: rgba(80, 48, 229, 0.2);
+  --color-green: #7AC555;
+  --color-orange: #fb771a;
+  --color-lilian: #E4CCFD;
+  --color-blue: #76A5EA;
+  --color-grey: #DBDBDB;
+  --color-error: tomato;
+
+
+
+  --font-family-main: 'Inter', sans-serif;
+
+  --font-size-medium: 16px;
+  --line-height-medium: 19px;
+  --font-weight-medium: 500;
+  --font-medium: var(--font-weight-medium) var(--font-size-medium) / var(--line-height-medium) var(--font-family-main);
+
+  --font-size-sb-m: 18px;
+  --line-height-sb-m: 22px;
+  --font-weight-sb: 600;
+  --font-sb-m: var(--font-weight-sb) var(--font-size-sb-m) / var(--line-height-sb-m) var(--font-family-main);
+
+  --font-size-sb-l: 20px;
+  --line-height-sb-l: 24px;
+  --font-sb-l: var(--font-weight-sb) var(--font-size-sb-l) / var(--line-height-sb-l) var(--font-family-main);
+
+  --font-size-sb-xl: 46px;
+  --line-height-sb-xl: 56px;
+  --font-sb-xl: var(--font-weight-sb) var(--font-size-sb-xl) / var(--line-height-sb-xl) var(--font-family-main);
+
+  --font-size-reg: 12px;
+  --line-height-reg: 15px;
+  --font-weight-reg: 400;
+  --font-reg: var(--font-weight-reg) var(--font-size-reg) / var(--line-height-reg) var(--font-family-main);
+
+  --font-size-bold: 12px;
+  --line-height-bold: 15px;
+  --font-weight-bold: 700;
+  --font-sb-bold: var(--font-weight-bold) var(--font-size-bold) / var(--line-height-bold) var(--font-family-main);
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+body {
+  font: var(--font-medium);
+  width: 100vw;
+  min-height: 100vh;
+
+  background-color: var(--main-bg);
+}

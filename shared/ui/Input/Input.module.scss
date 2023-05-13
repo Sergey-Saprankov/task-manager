@@ -1,0 +1,27 @@
+.Input {
+  width: 450px;
+  padding: 0 5px;
+  height: 50px;
+  font: var(--font-l);
+  background: #fff;
+  backdrop-filter: blur(30px);
+
+  color: var(--color-dark);
+  border: none;
+  border-radius: 7px;
+
+  outline: none;
+}
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.error {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+}

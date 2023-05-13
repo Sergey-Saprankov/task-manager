@@ -1,0 +1,43 @@
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  border: none;
+
+  &:hover {
+    opacity: 0.5;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+}
+
+.extraLarge {
+  width: 450px;
+  height: 50px;
+}
+
+.clear {
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  border: none;
+  outline: none;
+  //color: var(--color-primary);
+}
+
+.primary {
+  background-color: var(--color-orange);
+}
+
+.secondary {
+  //background-color: var(--btn-secondary-bg);
+}

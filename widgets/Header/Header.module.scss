@@ -1,0 +1,40 @@
+.Header {
+  padding: 22px 32px;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.innerWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.notifications {
+  display: flex;
+  align-items: center;
+}
+
+.userContainer {
+
+}
+
+.mr9 {
+  margin-right: 9px;
+}
+
+.mr24 {
+  margin-right: 24px;
+}
+
+.mr146 {
+  margin-right: 146px;
+}
+
+.input {
+  margin-right: 345px;
+}
