@@ -1,22 +1,36 @@
-import { Inter } from 'next/font/google'
+import React from 'react'
+
+import { useDisclosure } from '@chakra-ui/hooks'
+import { Modal } from '@chakra-ui/modal'
 import { useRouter } from 'next/router'
 
-import styles from '../app/styles/Home.module.scss'
-
 import { useAuthMeQuery } from '@/app/providers/authProvider'
+import cls from '@/app/styles/Home.module.scss'
+import { useAddTodoListMutation } from '@/features/addTodoList/api/addTodoApi'
 import { getLayout } from '@/layout/BaseLayout/BaseLayout'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Button, ButtonThemeColor, ButtonThemeSize } from '@/shared/ui/Button/Button'
+import { Loader } from '@/shared/ui/Loader/Loader'
 
 const Home = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [addTodoList] = useAddTodoListMutation()
   const router = useRouter()
-  const { data } = useAuthMeQuery()
+  const { data: authData, isLoading } = useAuthMeQuery()
 
-  if (data && data.resultCode) {
-    router.push('/login')
+  if (isLoading) {
+    return <Loader />
+  }
+  if (authData && authData.resultCode) {
+    router.replace('/login')
   }
 
-  return <>home</>
+  return (
+    <div className={cls.Home}>
+      <Button onClick={onOpen} color={ButtonThemeColor.SECONDARY} size={ButtonThemeSize.LARGE}>
+        Add Todo list
+      </Button>
+    </div>
+  )
 }
 
 Home.getLayout = getLayout

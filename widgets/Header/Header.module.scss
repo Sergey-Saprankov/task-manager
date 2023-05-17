@@ -1,5 +1,5 @@
 .Header {
-  padding: 22px 32px;
+  padding: 22px 48px;
   border-bottom: 1px solid var(--color-grey);
 }
 
@@ -17,10 +17,13 @@
 .notifications {
   display: flex;
   align-items: center;
+  margin-right: 50px;
 }
 
 .userContainer {
-
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 2;
 }
 
 .mr9 {
@@ -33,8 +36,4 @@
 
 .mr146 {
   margin-right: 146px;
-}
-
-.input {
-  margin-right: 345px;
 }

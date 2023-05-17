@@ -1,4 +1,4 @@
-import { AuthMeResponseType } from './types'
+import { AuthMeResponseType, ResponseData } from './types'
 
 import { rtkApi } from '@/api/rtkApi'
 
@@ -6,7 +6,6 @@ const authMeApi = rtkApi.injectEndpoints({
   endpoints: build => ({
     authMe: build.query<AuthMeResponseType, void>({
       query: () => ({
-        tagTypes: ['AuthMe'],
         url: `/auth/me`,
         method: 'GET',
         // body: {},

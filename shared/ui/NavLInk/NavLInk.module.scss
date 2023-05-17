@@ -1,0 +1,11 @@
+.NavLink {
+  font: var(--font-medium);
+
+  transition: color .2s ease-in-out;
+  color: var(--color-grey);
+  cursor: pointer;
+}
+
+.isActive {
+  color: var(--color-dark);
+}

@@ -10,6 +10,10 @@
   color: var(--color-error);
 }
 
+.grey {
+  color: var(--color-navlink);
+}
+
 .fontSemiBold-l {
   font: var(--font-sb-l);
 }
@@ -20,4 +24,8 @@
 
 .regular {
   font: var(--font-reg);
+}
+
+.medium {
+  font: var(--font-medium);
 }

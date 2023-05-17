@@ -1,9 +1,11 @@
 import React from 'react'
 
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import cls from './Login.module.scss'
 
+import { useAuthMeQuery } from '@/app/providers/authProvider'
 import { LoginForm } from '@/features/authByEmail/ui/LoginForm'
 import bg from '@/public/bg1.jpg'
 

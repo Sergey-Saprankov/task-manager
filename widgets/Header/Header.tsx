@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import cls from './Header.module.scss'
 
+import { User } from '@/entities/User/ui/User'
 import calendar from '@/public/calendar-2.svg'
 import icon from '@/public/icon.png'
 import message from '@/public/message-question.svg'
@@ -22,19 +23,22 @@ export const Header = () => {
             Project M.
           </Text>
         </div>
-        <SearchInput placeholder={'Search for anything...'} className={cls.input} />
-        <ul className={cls.notifications}>
-          <li>
-            <Image className={cls.mr24} src={calendar} alt={'calendar'} width={24} height={24} />
-          </li>
-          <li>
-            <Image className={cls.mr24} src={message} alt={'message'} width={24} height={24} />
-          </li>
-          <li>
-            <Image src={notification} alt={'notification'} width={24} height={24} />
-          </li>
-        </ul>
-        <div className={cls.userContainer}></div>
+        <SearchInput placeholder={'Search for anything...'} />
+        <div className={cls.userContainer}>
+          <ul className={cls.notifications}>
+            <li>
+              <Image className={cls.mr24} src={calendar} alt={'calendar'} width={24} height={24} />
+            </li>
+            <li>
+              <Image className={cls.mr24} src={message} alt={'message'} width={24} height={24} />
+            </li>
+            <li>
+              <Image src={notification} alt={'notification'} width={24} height={24} />
+            </li>
+          </ul>
+
+          <User />
+        </div>
       </div>
     </header>
   )

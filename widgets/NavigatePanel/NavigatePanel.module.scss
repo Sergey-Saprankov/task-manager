@@ -1,0 +1,29 @@
+.Nav {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid var(--color-grey);
+
+  margin-bottom: 30px;
+
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 25px;
+
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+ }

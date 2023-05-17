@@ -7,6 +7,7 @@ import { classNames } from '@/shared/lib/classNames'
 export enum TextColorTheme {
   DARK = 'dark',
   LIGHT = 'light',
+  GREY = 'grey',
   ERROR = 'error',
 }
 
@@ -14,6 +15,7 @@ export enum TextFontTheme {
   FONT_SEMI_BOLD_L = 'fontSemiBold-l',
   FONT_SEMI_BOLD_XL = 'fontSemiBold-xl',
   FONT_REG = 'regular',
+  MEDIUM = 'medium',
 }
 
 interface TextProps {

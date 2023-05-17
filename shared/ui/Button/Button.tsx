@@ -24,12 +24,14 @@ interface ButtonProps
   color?: ButtonThemeColor
 }
 export const Button: FC<ButtonProps> = memo(
-  ({ className = '', size = 'medium', color = '', type = 'button', ...otherProps }) => {
+  ({ className = '', size = 'medium', children, color = '', type = 'button', ...otherProps }) => {
     return (
       <button
         {...otherProps}
         className={classNames(cls.Button, {}, [cls[size], cls[color], className])}
-      ></button>
+      >
+        {children}
+      </button>
     )
   }
 )

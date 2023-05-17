@@ -1,0 +1,22 @@
+.NavTodoLists {
+
+}
+
+.item {
+  padding: 10px 12px;
+  width: 100%;
+
+  border-radius: 6px;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  cursor: pointer;
+}
+
+.isActive {
+  background-color: var(--color-lilian);
+
+}

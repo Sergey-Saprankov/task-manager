@@ -1,5 +1,8 @@
 import React, { useCallback } from 'react'
 
+import { is } from 'immutable'
+import { useRouter } from 'next/router'
+
 import cls from './LoginForm.module.scss'
 
 import {
@@ -23,13 +26,18 @@ import { Input } from '@/shared/ui/Input/Input'
 import { Text, TextColorTheme, TextFontTheme } from '@/shared/ui/Text/Text'
 
 export const LoginForm = () => {
-  const [] = useLoginMutation()
+  const [login, { data, error, isSuccess, status }] = useLoginMutation()
+  const router = useRouter()
   const dispatch = useAppDispatch()
   const email = useAppSelector(getEmail)
   const password = useAppSelector(getPassword)
   const errorPassword = useAppSelector(getErrorPassword)
   const errorEmail = useAppSelector(getErrorEmail)
   const isChecked = useAppSelector(getIsChecked)
+
+  if (data && !data.resultCode) {
+    router.replace('/')
+  }
 
   const onChangeEmail = useCallback(
     (value: string) => {
@@ -69,6 +77,9 @@ export const LoginForm = () => {
   }, [dispatch, email])
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    if (!errorEmail && !errorPassword) {
+      login({ email, password, rememberMe: isChecked })
+    }
   }
 
   return (
@@ -115,6 +126,7 @@ export const LoginForm = () => {
           label={'Remember me'}
         />
         <Button
+          type={'submit'}
           className={cls.mt50}
           size={ButtonThemeSize.EXTRA_LARGE}
           color={ButtonThemeColor.PRIMARY}

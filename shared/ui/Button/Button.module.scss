@@ -24,6 +24,11 @@
   height: 50px;
 }
 
+.large {
+  width: 350px;
+  height: 40px;
+}
+
 .clear {
   margin: 0;
   padding: 0;
@@ -39,5 +44,5 @@
 }
 
 .secondary {
-  //background-color: var(--btn-secondary-bg);
+  background-color: var(--color-lilian);
 }

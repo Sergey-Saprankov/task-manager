@@ -1,5 +1,11 @@
+export interface ResponseData {
+  id: number
+  email: string
+  login: string
+}
+
 export type AuthMeResponseType = {
-  data: {}
+  data: ResponseData
   messages: string[]
   fieldsErrors: []
   resultCode: number
