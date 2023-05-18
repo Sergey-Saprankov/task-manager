@@ -20,3 +20,10 @@
   background-color: var(--color-lilian);
 
 }
+
+.addToDoContainer {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}

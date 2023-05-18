@@ -31,6 +31,7 @@
 .form {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   //align-items: center;
 }
 
@@ -49,4 +50,9 @@
 
 .mt50 {
   margin-top: 50px;
+}
+
+.input {
+  width: 450px;
+  border: none;
 }

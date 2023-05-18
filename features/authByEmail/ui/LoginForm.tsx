@@ -41,6 +41,7 @@ export const LoginForm = () => {
 
   const onChangeEmail = useCallback(
     (value: string) => {
+      if (value.length >= 3) dispatch(setErrorEmail(null))
       dispatch(setEmail(value))
     },
     [dispatch, email]
@@ -48,6 +49,7 @@ export const LoginForm = () => {
 
   const onChangePassword = useCallback(
     (value: string) => {
+      if (value.length >= 3) dispatch(setErrorPassword(null))
       dispatch(setPassword(value))
     },
     [dispatch, password]
@@ -108,7 +110,7 @@ export const LoginForm = () => {
           onBlur={onBlurEmail}
           value={email}
           title={'Email'}
-          className={cls.mb50}
+          className={cls.input}
         />
         <Input
           onChange={onChangePassword}
@@ -116,7 +118,7 @@ export const LoginForm = () => {
           onBlur={onBlurPassword}
           value={password}
           title={'Password'}
-          className={cls.mb20}
+          className={cls.input}
         />
         <CheckBox
           onChangeChecked={onChangeChecked}

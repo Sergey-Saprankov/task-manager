@@ -1,4 +1,4 @@
-export { AddTodoModal } from './ui/AddTodoModal'
+export { DeleteTodoModal } from 'features/deleteToDoList/ui/DeleteTodoModal'
 export * from './model/slice/addTodoSlice'
 export type { AddTodoSchema } from './model/types/addTodoSchema'
 export { getTitle } from './model/selectors/getTitle/getTitle'

@@ -14,4 +14,7 @@ const todoListsApi = rtkApi.injectEndpoints({
   }),
 })
 
-export const { useGetTodosQuery } = todoListsApi
+export const {
+  useGetTodosQuery,
+  endpoints: { getTodos },
+} = todoListsApi

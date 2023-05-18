@@ -16,6 +16,7 @@ export enum TextFontTheme {
   FONT_SEMI_BOLD_XL = 'fontSemiBold-xl',
   FONT_REG = 'regular',
   MEDIUM = 'medium',
+  BOLD = 'bold',
 }
 
 interface TextProps {

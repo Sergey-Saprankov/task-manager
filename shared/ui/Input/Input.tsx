@@ -32,7 +32,7 @@ export const Input: FC<InputProps> = memo(
     }
 
     return (
-      <label className={classNames(cls.label, {}, [className])}>
+      <label className={classNames(cls.label, {}, [])}>
         {title}
 
         <input
@@ -40,7 +40,7 @@ export const Input: FC<InputProps> = memo(
           placeholder={placeholder}
           value={value}
           type={type}
-          className={classNames(cls.Input, {}, [])}
+          className={classNames(cls.Input, {}, [className])}
           onChange={onChangeHandler}
           {...otherProps}
         />

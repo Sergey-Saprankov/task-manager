@@ -2,12 +2,14 @@ import { configureStore, createStore, ReducersMapObject } from '@reduxjs/toolkit
 
 import { rtkApi } from '@/api/rtkApi'
 import { StateSchema } from '@/app/providers/storeProvider/config/StateSchema'
+import { addTodoReducer } from '@/features/addTodoList'
 import { authReducer } from '@/features/authByEmail'
 
 export const makeStore = () => {
   const rootStore: ReducersMapObject<StateSchema> = {
     [rtkApi.reducerPath]: rtkApi.reducer,
     login: authReducer,
+    addTodo: addTodoReducer,
   }
 
   return configureStore({

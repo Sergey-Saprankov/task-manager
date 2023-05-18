@@ -1,19 +1,15 @@
 import React from 'react'
 
-import { useDisclosure } from '@chakra-ui/hooks'
-import { Modal } from '@chakra-ui/modal'
 import { useRouter } from 'next/router'
 
 import { useAuthMeQuery } from '@/app/providers/authProvider'
 import cls from '@/app/styles/Home.module.scss'
-import { useAddTodoListMutation } from '@/features/addTodoList/api/addTodoApi'
 import { getLayout } from '@/layout/BaseLayout/BaseLayout'
 import { Button, ButtonThemeColor, ButtonThemeSize } from '@/shared/ui/Button/Button'
 import { Loader } from '@/shared/ui/Loader/Loader'
+import { Text, TextColorTheme, TextFontTheme } from '@/shared/ui/Text/Text'
 
 const Home = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const [addTodoList] = useAddTodoListMutation()
   const router = useRouter()
   const { data: authData, isLoading } = useAuthMeQuery()
 
@@ -26,7 +22,10 @@ const Home = () => {
 
   return (
     <div className={cls.Home}>
-      <Button onClick={onOpen} color={ButtonThemeColor.SECONDARY} size={ButtonThemeSize.LARGE}>
+      <Text tag={'h2'} color={TextColorTheme.GREY} font={TextFontTheme.MEDIUM}>
+        Create a new To do list to get started.
+      </Text>
+      <Button color={ButtonThemeColor.SECONDARY} size={ButtonThemeSize.LARGE}>
         Add Todo list
       </Button>
     </div>
